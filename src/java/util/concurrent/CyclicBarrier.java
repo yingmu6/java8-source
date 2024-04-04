@@ -136,7 +136,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author Doug Lea
  */
-public class CyclicBarrier {
+public class CyclicBarrier { //test
     /**
      * Each use of the barrier is represented as a generation instance.
      * The generation changes whenever the barrier is tripped, or
