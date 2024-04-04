@@ -34,7 +34,7 @@ package java.applet;
  * @author      Arthur van Hoff
  * @since       JDK1.0
  */
-public interface AudioClip {
+public interface AudioClip { //test
     /**
      * Starts playing this audio clip. Each time this method is called,
      * the clip is restarted from the beginning.
