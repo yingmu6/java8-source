@@ -204,8 +204,8 @@ public class ReentrantLock implements Lock, java.io.Serializable {
          * acquire on failure.
          */
         final void lock() {
-            if (compareAndSetState(0, 1))
-                setExclusiveOwnerThread(Thread.currentThread());
+            if (compareAndSetState(0, 1)) //加锁的时候，会将同步状态state置为1（volatile类型）
+                setExclusiveOwnerThread(Thread.currentThread()); //设置当前线程为锁的拥有线程
             else
                 acquire(1);
         }

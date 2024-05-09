@@ -530,7 +530,7 @@ public abstract class AbstractQueuedSynchronizer
     /**
      * The synchronization state.
      */
-    private volatile int state;
+    private volatile int state; //同步状态
 
     /**
      * Returns the current value of synchronization state.

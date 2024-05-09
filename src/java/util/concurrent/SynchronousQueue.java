@@ -48,7 +48,7 @@ import java.util.Spliterators;
  * internal capacity, not even a capacity of one.  You cannot
  * {@code peek} at a synchronous queue because an element is only
  * present when you try to remove it; you cannot insert an element
- * (using any method) unless another thread is trying to remove it;
+ * (using any method) unless another thread is trying to remove it; （不能插入一个元素，除非有另一个线程尝试移除元素）
  * you cannot iterate as there is nothing to iterate.  The
  * <em>head</em> of the queue is the element that the first queued
  * inserting thread is trying to add to the queue; if there is no such
@@ -82,7 +82,7 @@ import java.util.Spliterators;
  * @param <E> the type of elements held in this collection
  */
 public class SynchronousQueue<E> extends AbstractQueue<E>
-    implements BlockingQueue<E>, java.io.Serializable {
+    implements BlockingQueue<E>, java.io.Serializable { //
     private static final long serialVersionUID = -3223113410248163686L;
 
     /*

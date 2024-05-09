@@ -32,10 +32,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectStreamException;
 
 /**
- * This is the common base class of all Java language enumeration types.
+ * This is the common base class of all Java language enumeration types. 所有的枚举类型的公共基础类（枚举类默认继承的）
  *
  * More information about enums, including descriptions of the
- * implicitly declared methods synthesized by the compiler, can be
+ * implicitly（隐式的） declared methods synthesized by the compiler, can be
  * found in section 8.9 of
  * <cite>The Java&trade; Language Specification</cite>.
  *
@@ -86,7 +86,7 @@ public abstract class Enum<E extends Enum<E>>
      * for use by sophisticated enum-based data structures, such as
      * {@link java.util.EnumSet} and {@link java.util.EnumMap}.
      */
-    private final int ordinal;
+    private final int ordinal; //枚举常量的序号
 
     /**
      * Returns the ordinal of this enumeration constant (its position
@@ -228,7 +228,7 @@ public abstract class Enum<E extends Enum<E>>
      * @since 1.5
      */
     public static <T extends Enum<T>> T valueOf(Class<T> enumType,
-                                                String name) {
+                                                String name) { //获取指定类型和枚举名称对应的枚举
         T result = enumType.enumConstantDirectory().get(name);
         if (result != null)
             return result;
